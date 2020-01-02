@@ -1,6 +1,6 @@
 from django.shortcuts import render,get_object_or_404
 from .models import call
-
+import random
 
 # Create your views here.
 
@@ -20,4 +20,13 @@ from .models import call
 #     return HttpResponse(html_)
 
 def index(request):
-    return render(request,'base.html',{})
+    num = random.randint(1,99999999999999)
+    some_list = [num,random.randint(1,99999999999999),random.randint(1,99999999999999),random.randint(1,99999999999999)]
+    bool_var = True
+    context = {
+    "name":"Ayush",
+    "num":num,
+    "some_list":some_list,
+    "bool_var":bool_var
+    }
+    return render(request,'base.html',context)
