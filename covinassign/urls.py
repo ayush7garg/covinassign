@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+import callanalyzer.views
+from django.conf import settings
 
 urlpatterns = [
-    path('', include('callanalyzer.urls')),
+    path('', callanalyzer.views.index,name='index'),
     path('admin/', admin.site.urls),
 ]

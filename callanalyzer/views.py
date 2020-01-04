@@ -1,6 +1,6 @@
 from django.shortcuts import render,get_object_or_404
 from .models import call
-from .form import callForm
+# from .form import callForm
 import random
 # Create your views here.
 
@@ -20,5 +20,5 @@ import random
 #     return HttpResponse(html_)
 
 def index(request):
-    file = callForm()
+    file = call.objects
     return render(request,"base.html",{'form':file})

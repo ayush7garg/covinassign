@@ -55,7 +55,7 @@ ROOT_URLCONF = 'covinassign.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')], #path to the templates folder
+        'DIRS': [], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'covinassign.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'callanalyzerdb',
-        'USER':'ayushgarg123',
-        'PASSWORD':'meenu77garg',
-        'HOST':'localhost',
-        'PORT':'5432',
+        'NAME': 'call-analyzer',
+        'USER': 'postgres',
+        'PASSWORD': 'COE2CO6',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
