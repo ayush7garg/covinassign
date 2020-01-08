@@ -16,12 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
-import callanalyzer.views
+from callanalyzer import views
 from django.conf import settings
 from django.conf.urls import url
 
+router = routers.DefaultRouter()
+router.register(r'files', views.FileView)
+
 urlpatterns = [
-    path('', callanalyzer.views.index,name='index'),
+    path('',include(router.urls), callanalyzer.views.index,name='index'),
     path('admin/', admin.site.urls),
-    url('upload/', callanalyzer.views.FileView.as_view(), name='post'),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    # url('upload/', callanalyzer.views.FileView.as_view(), name='post'),
 ]
