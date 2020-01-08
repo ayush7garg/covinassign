@@ -21,11 +21,12 @@ from django.conf import settings
 from django.conf.urls import url
 
 router = routers.DefaultRouter()
-router.register(r'files', views.FileView)
+router.register(r'files', views.FileView,basename='call')
 
 urlpatterns = [
-    path('',include(router.urls), callanalyzer.views.index,name='index'),
-    path('admin/', admin.site.urls),
+    # path('', views.index,name='index'),
+    path('', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
     # url('upload/', callanalyzer.views.FileView.as_view(), name='post'),
 ]
+urlpatterns += router.urls

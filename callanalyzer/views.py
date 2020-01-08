@@ -12,6 +12,7 @@ def index(request):
 
 class FileView(viewsets.ModelViewSet):
   serializer_class = FileSerializer
+  queryset=''
   # parser_classes = (MultiPartParser, FormParser)
   # def post(self, request, *args, **kwargs):
   #   file_serializer = FileSerializer(data=request.data)
