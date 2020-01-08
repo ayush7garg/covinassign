@@ -11,8 +11,10 @@ def index(request):
     return render(request,"base.html",{'form':file})
 
 class FileView(APIView):
+
   parser_classes = (MultiPartParser, FormParser)
   def post(self, request, *args, **kwargs):
+    request.method = "POST"
     file_serializer = FileSerializer(data=request.data)
     if file_serializer.is_valid():
       file_serializer.save()
