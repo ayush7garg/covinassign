@@ -21,8 +21,8 @@ Follow the following steps:
 14. Now enter the provided server address in any browser window.
 15. Now enter the same Username and password that you used while creating the superuser.
 16. The django administration window will open in the browser window.
-17. Under the app name 'CALLANALYZER', you can see a madel named 'Calls'. Click on it.
-18. After that, you will be taken to another page. Click on 'Add Call' button on the top-right of the page.
+17. Under the app name 'CALLANALYZER', you can see a model named 'Calls'. Click on it.
+18. After that, you will be taken to another page. Click on 'Add Call' button on the top-right corner of the page.
 19. Now upload a text file in the 'File' field and enter some text in the 'Char' field.
 20. Click on 'Save' button.
 21. You will see a message in green color on the top of the window saying "The call “call object (1)” was added successfully."
